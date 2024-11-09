@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Square Path Animation</title>
+<style>
+  /* Контейнер для анімації */
+  .container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Стиль для рухомого блоку */
+  .block {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: red;
+    animation: moveAndChangeColor 4s linear infinite;
+  }
+
+  /* Ключові кадри для руху по квадратній траєкторії в центрі */
+  @keyframes moveAndChangeColor {
+    0% {
+      transform: translate(-75px, -75px);
+      background-color: red;
+    }
+    25% {
+      transform: translate(75px, -75px);
+      background-color: yellow;
+    }
+    50% {
+      transform: translate(75px, 75px);
+      background-color: blue;
+    }
+    75% {
+      transform: translate(-75px, 75px);
+      background-color: green;
+    }
+    100% {
+      transform: translate(-75px, -75px);
+      background-color: red;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="block"></div>
+</div>
+
+</body>
+</html>
